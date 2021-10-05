@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './shared/guards/auth.guard';
 import { DataUserGuard } from './shared/guards/data-user.guard';
 import { ConnexionComponent } from './views/connexion/connexion.component';
-import { HomeComponent } from './views/home/home.component';
 import { InscriptionComponent } from './views/inscription/inscription.component';
 import { ProfilComponent } from './views/profil/profil.component';
 
@@ -12,7 +11,11 @@ const routes: Routes = [
     path: '',
     canActivate: [DataUserGuard],
     children: [
-      { path: '', component: HomeComponent },
+      {
+        path: '',
+        loadChildren: () =>
+          import('./features/photos/photos.module').then((m) => m.PhotosModule),
+      },
       {
         path: 'connexion',
 

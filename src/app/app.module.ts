@@ -9,7 +9,6 @@ import { LayoutModule } from './shared/modules/layout.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './shared/components/header/header.component';
-import { HomeComponent } from './views/home/home.component';
 import { ConnexionComponent } from './views/connexion/connexion.component';
 import { InscriptionComponent } from './views/inscription/inscription.component';
 import { ProfilComponent } from './views/profil/profil.component';
@@ -25,7 +24,6 @@ import { AuthEffects } from './shared/store/auth.effects';
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent,
     ConnexionComponent,
     InscriptionComponent,
     ProfilComponent,
